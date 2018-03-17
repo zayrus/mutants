@@ -1,0 +1,15 @@
+.idea
+.tmp
+.DS_Store
+
+dist
+node_modules
+public
+
+npm-debug.log
+server/config/local.env.js
+
+*.bak
+*.bkp
+*.swo
+*.swp

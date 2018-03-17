@@ -1,0 +1,28 @@
+{
+  "name": "mutants",
+  "version": "1.0.0",
+  "description": "dna analisys app to find mutants",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zayrus/mutants.git"
+  },
+  "keywords": [
+    "dna",
+    "mutants"
+  ],
+  "author": "ernesto venencio",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zayrus/mutants/issues"
+  },
+  "homepage": "https://github.com/zayrus/mutants#readme",
+  "dependencies": {
+    "fastify": "^1.1.1",
+    "fastify-swagger": "^0.6.0"
+  }
+}
