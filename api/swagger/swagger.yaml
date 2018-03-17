@@ -14,8 +14,8 @@ produces:
   - application/json
 paths:
   /mutants:
-    x-swagger-router-controller: mutants
-    get:
+    x-swagger-router-controller: analyze
+    post:
       description: Returns dna Analysis, when true is Mutant
       operationId: isMutant
       parameters:
