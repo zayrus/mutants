@@ -26,9 +26,17 @@ async function routes (fastify, options) {
 		return {isMutant: analisys.mutant}
 	})
 	
-	fastify.get('/stats', function(request, reply) {
+	fastify.get('/stats', async(request, reply) => {
+		const mutantDna = await collMutants.count()
+		const humanDna = await collHumans.count()
+		const ratioDna = mutantDna / humanDna
+		let stats = {
+			count_mutant_dna: mutantDna,
+			count_human_dna: humanDna,
+			ratio: ratioDna
+		}
 		reply.type('application/json').code(200)
-		return { hello: 'world' }
+		return stats
 	})
 }
 
