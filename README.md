@@ -9,9 +9,9 @@ Made with
 - [tap](https://www.node-tap.org)
 
 ## Getting Started
-Run `git clone https://github.com/zayrus/mutants.git`
-Run `cd mutants & npm i`
-Run `npm start`
+- Run `git clone https://github.com/zayrus/mutants.git`
+- Run `cd mutants & npm i`
+- Run `npm start`
 
 ## API Routes
 - /mutants
