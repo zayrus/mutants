@@ -38,6 +38,11 @@ async function routes (fastify, options) {
 		reply.type('application/json').code(200)
 		return stats
 	})
+
+	fastify.get('/', async (request, reply) => {
+		reply.type('application/json').code(200)
+		return { hello: 'world' }
+	})
 }
 
 module.exports = routes

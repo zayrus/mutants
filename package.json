@@ -4,7 +4,7 @@
   "description": "dna analisys app to find mutants",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node test/*.js",
     "start": "node app"
   },
   "repository": {
@@ -26,5 +26,8 @@
     "fastify-plugin": "^0.2.2",
     "fastify-swagger": "^0.6.0",
     "mongodb": "^3.0.4"
+  },
+  "devDependencies": {
+    "tap": "^11.1.2"
   }
 }
