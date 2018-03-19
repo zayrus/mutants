@@ -13,3 +13,4 @@ server/config/local.env.js
 *.bkp
 *.swo
 *.swp
+*.env

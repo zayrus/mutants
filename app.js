@@ -1,16 +1,17 @@
 'use strict'
-
+require('dotenv').config()
 const Fastify = require('fastify')
 const fastifySwagger = require('fastify-swagger')
 const fastify = buildFastify()
 
 function buildFastify () {
+  const dbHost = process.env.DB_HOST
   const fastify = Fastify()
 
   fastify.register(require('./dbconnector'), {
-    url: 'mongodb://localhost:27017/'
+    url: dbHost
   })
-  
+
   fastify.register(require('./routes'))
   
   fastify.register(fastifySwagger, {
@@ -24,10 +25,7 @@ function buildFastify () {
 }
 
 fastify.listen(3000, '127.0.0.1', function (err) {
-  if (err) {
-    fastify.log.error(err)
-    process.exit(1)
-  }
+  if (err) throw err
   console.log(`server listening on ${fastify.server.address().port}`)
 })
 

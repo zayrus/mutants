@@ -11,6 +11,7 @@ Made with
 ## Getting Started
 - Run `git clone https://github.com/zayrus/mutants.git`
 - Run `cd mutants & npm i`
+- Rename .example_env to .env
 - Run `npm start`
 
 ## API Routes
