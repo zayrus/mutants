@@ -12,6 +12,7 @@ Made with
 - Run `git clone https://github.com/zayrus/mutants.git`
 - Run `cd mutants & npm i`
 - Rename .example_env to .env
+- Run `mongod`
 - Run `npm start`
 
 ## API Routes
@@ -21,3 +22,27 @@ Made with
 
 ## Tests
 Run `npm test`
+
+## Example data
+
+### Mutant
+- Method: POST
+- Endpoint: /mutants
+- Body: {dna: ["ATGCGA","CAGTGC","TTATTT","AGACGG","GCGTCA","TCACTG"]}
+
+#### Curl 
+curl -X POST \
+  https://mutants-bjnfgbemjb.now.sh/mutants \
+  -H 'Content-Type: application/json' \
+  -d ' {"dna": ["ATGCGA","CAGTGC","TTATGT","AGAAGG","CCCCTA","TCACTG"]}'
+
+### Human
+- Method: POST
+- Endpoint: /mutants
+- Body: {dna: ["ATGCGA","CAGTGC","TTATGT","AGAAGG","CCCCTA","TCACTG"]}
+
+#### Curl
+curl -X POST \
+  https://mutants-bjnfgbemjb.now.sh/mutants \
+  -H 'Content-Type: application/json' \
+  -d '{"dna": ["ATGCGA","CAGTGC","TTATTT","AGACGG","GCGTCA","TCACTG"]}'
