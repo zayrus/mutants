@@ -3,10 +3,10 @@ require('dotenv').config()
 const Fastify = require('fastify')
 const fastifySwagger = require('fastify-swagger')
 const fastify = buildFastify()
+const port = process.env.PORT || 3000
 
 function buildFastify () {
   const dbHost = process.env.DB_HOST
-  const port = process.env.PORT || 3000
   const fastify = Fastify()
 
   fastify.register(require('./dbconnector'), {
