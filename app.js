@@ -6,6 +6,7 @@ const fastify = buildFastify()
 
 function buildFastify () {
   const dbHost = process.env.DB_HOST
+  const port = process.env.PORT || 3000
   const fastify = Fastify()
 
   fastify.register(require('./dbconnector'), {
@@ -24,7 +25,7 @@ function buildFastify () {
   return fastify
 }
 
-fastify.listen(3000, '127.0.0.1', function (err) {
+fastify.listen(port, '0.0.0.0', function (err) {
   if (err) throw err
   console.log(`server listening on ${fastify.server.address().port}`)
 })
